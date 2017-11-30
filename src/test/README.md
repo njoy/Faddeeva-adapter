@@ -1,4 +1,4 @@
-#Testing the Faddeeva function
+# Testing the Faddeeva function
 
 Compile the [Faddeeva.cc](../Faddeeva.cc) file including the `-DTEST_FADDEEVA` flag (on Unix).
 
