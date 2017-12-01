@@ -1,0 +1,13 @@
+#ifndef __FADDEEVA__
+#define __FADDEEVA__
+
+#include "src/Faddeeva.hh"
+
+namespace std {
+namespace experimental {
+
+using namespace Faddeeva;
+
+}
+}
+#endif
