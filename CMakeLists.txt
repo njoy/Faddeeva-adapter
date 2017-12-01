@@ -35,9 +35,11 @@ message( STATUS "Git commit hash: ${GIT_HASH}" )
 message( STATUS "" )
 message( STATUS "-----------------------------------------------------------" )
 
-add_library( Faddeeva-adapter INTERFACE )
-target_include_directories( Faddeeva-adapter INTERFACE . )
-target_sources( Faddeeva-adapter INTERFACE
+add_library( Faddeeva-adapter "" )
+target_include_directories( Faddeeva-adapter PUBLIC src )
+target_sources( Faddeeva-adapter PUBLIC
 "${CMAKE_CURRENT_SOURCE_DIR}/src/Faddeeva.hh"
-"${CMAKE_CURRENT_SOURCE_DIR}/src/Faddeeva.cc"
-"${CMAKE_CURRENT_SOURCE_DIR}/faddeeva")
+PRIVATE
+"${CMAKE_CURRENT_SOURCE_DIR}/src/Faddeeva.cc")
+enable_testing()
+add_subdirectory( src/test )
